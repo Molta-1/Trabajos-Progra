@@ -22,5 +22,12 @@ write_xlsx(df, "df.xlsx")
 #5. Escriba un programa en R que le solicite al usuario datos acerca de mascotas: animal: Gato
 #o Perro, Nombre, Edad y los almacene en un data frame y al finalizar el ingreso escriba los
 #datos del data frame en archivo .csv y .xlsx.
+Animal <- as.character(readline(prompt = "Ingrese la raza de la mascota (perro o gato): "))
+Nombre <- as.character(readline(prompt = "Ingrese el nombre de la mascota: "))
+Edad <- as.numeric(readline(prompt = "Ingrese la edad de la mascota: "))
+    
+datosm <- data.frame(Raza = Animal, Nombre = Nombre, Edad = Edad)
 
-
+mascota <- datosm
+write.csv(mascota, "mascota.csv", row.names = TRUE)
+write_xlsx(mascota, "mascota.xlsx")
