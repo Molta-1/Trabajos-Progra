@@ -25,7 +25,7 @@ es_palindromo_recursivo <- function(cadena) {
 }
 
 interactuar_usuario <- function() {
-  cat("Ingrese una palabra o frase para verificar si es palíndromo (ej: Ana lleva al oso la avena): \n")
+  cat("Ingrese una palabra o frase para verificar si es palíndromo: \n")
   entrada_usuario <- readline()
   
   if (nchar(entrada_usuario) == 0) {
